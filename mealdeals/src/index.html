@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mit főzzek ma?</title>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Logo_PD's_fisheye_16x16.jpg">
+</head>
+<body>
+    <div class="container">
+        <h1>Mit főzzek ma?</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="ingredients">Adja meg az otthoni alapanyagokat (vesszővel elválasztva):</label>
+                <input type="text" class="form-control" id="ingredients" name="ingredients">
+            </div>
+            <button type="submit" class="btn btn-primary">Keresés</button>
+        </form>
+        <br>
+        <h2>Eredmények:</h2>
+        <ul>
+            {% for recipe in recipes %}
+            <li>
+                <h3>{{ recipe[0] }}</h3>
+                <p>Elkészítési idő: {{ recipe[1] }} perc</p>
+                <p>Recept: {{ recipe[2] }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        <p>© 2023 ProDevs kopirájtkriptobájt</p>
+    </footer>
+</body>
+</html>

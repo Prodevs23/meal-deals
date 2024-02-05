@@ -3,7 +3,10 @@
 </header>
 
 <?php
-  include_once "menu.php";
+  <?php
+  include_once "mealdeals/header.php";
+  include_once "mealdeals/menu.php";
+ ?>
 ?>
 
 <div class="container login">

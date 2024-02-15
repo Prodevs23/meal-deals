@@ -25,5 +25,8 @@ $str = substr($string, strrpos($string, '/') + 1);
     case "alapanyagok":
         $var = "Alapanyagok";
         break;
+    case "ing":
+        $var = "Ingredients";
+        break;
 }
 ?>

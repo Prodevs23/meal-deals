@@ -1,10 +1,128 @@
+<?php
+session_start();
+?>
+
 <header class="fejlec">
+
     <?php include_once "header.php"; ?>
+
 </header>
 
 <?php
-  include_once "menu.php";
+
+include_once "menu.php";
+
+include_once('function.php');
+
+$usercredentials = new DB_con();
+
+if(isset($_POST['signin']))
+{
+
+$uname = $_POST['username'];
+$pasword = md5($_POST['password']);
+
+$ret = $usercredentials->signin($uname, $pasword);
+
+$num=mysqli_fetch_array($ret);
+
+if($num>0) {
+  $_SESSION['userid'] = $num['user_id'];
+  //$_SESSION['lastname'] = $num['lastname'];
+  //$_SESSION['middlename'] = $num['middlename'];
+  //$_SESSION['firstname'] = $num['firstname'];
+  $_SESSION['username'] = $num['username'];
+  //$_SESSION['email'] = $num['email'];
+  //$_SESSION['phone'] = $num['phone'];
+  //$_SESSION['address'] = $num['address'];
+  $_SESSION['pass'] = $num['pass'];
+  $_SESSION['pasword'] = $_POST['password'];
+  
+  if ($num['username'] == 'admin') {
+  //echo "ok" . $num['username'] . $_POST['password'];
+  echo "<script>window.location.href='admin.php'</script>";
+  //echo "<script>window.location.href='admin.php'</script>";
+  } else {
+  echo "<script>window.location.href='ing.php'</script>";
+  }
+
+//echo "<script>window.location.href='welcome.php'</script>";
+}
+else
+{
+// Message for unsuccessfull login
+echo "<script>alert('Wrong username or password. Please try again');</script>";
+echo "<script>window.location.href='login.php'</script>";
+}
+}
 ?>
+ 
+ 
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <title>User Signin using PHP OOPs Concept</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <!--
+    <link href="assests/style.css" rel="stylesheet">
+    <script src="assests/jquery-1.11.1.min.js"></script>
+    <script src="assests/bootstrap.min.js"></script>
+-->
+</head>
+
+<!--
+<body>
+<form class="form-horizontal" action='' method="POST">
+  <fieldset>
+    <div id="legend">
+      <legend class="">User Signin</legend>
+    </div>
+ 
+<div class="control-group">
+      
+      <label class="control-label"  for="username">Username</label>
+      <div class="controls">
+        <input type="text" id="username" name="username" placeholder="" class="input-xlarge" required="true">
+      </div>
+    </div>
+ 
+ 
+    <div class="control-group">
+      
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <input type="password" id="password" name="password" placeholder="" class="input-xlarge" required="true">
+      </div>
+    </div>
+ 
+ 
+ 
+    <div class="control-group">
+      
+      <div class="controls">
+        <button class="btn btn-success" type="submit" name="signin">Signin</button>
+      </div>
+    </div>
+ 
+ <div class="control-group">
+      
+      <div class="controls">
+      Not Registered yet? <a href="index.php">Register Here</a>
+      </div>
+    </div>
+ 
+  </fieldset>
+</form>
+<script type="text/javascript">
+ 
+</script>
+</body>
+-->
+
+</html>
+
 
 <div class="container login">
 
@@ -12,16 +130,16 @@
     <img src="pic/creation-logo-chef.avif" alt="Chef" width="420px">
   </div>
 
-  <form action="index.php" method="GET">
-  
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input class="inputbox" type="text" placeholder="Enter Username" name="uname" required>
+  <form action="" method="POST">
 
-      <label for="psw"><b>Password</b></label>
-      <input class="inputbox" type="password" placeholder="Enter Password" name="psw" required>
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input class="inputbox" type="text" placeholder="Enter Username" name="username" onblur="checkusername(this.value)" required>
+
+      <label for="pass"><b>Password</b></label>
+      <input class="inputbox" type="password" placeholder="Enter Password" name="password" required>
         
-      <button type="submit" formaction="index.php">Login</button>
+      <button type="submit" formaction="" name="signin">Login</button>
       <div class="remember">
         <label for="remember">remember me</label>
         <input class="inputbox ch" type="checkbox" name="remember">
@@ -34,3 +152,20 @@
     </div>
   </form>
 </div>
+
+<script type="text/javascript">
+</script>
+
+<script>
+function checkusername(value) {
+  $.ajax({
+  type: "POST",
+  url: "check_availability.php",
+  data:'username=' + value,
+  success: function(data) {
+  $("#usernameavailability").html(data);
+  }
+  });
+
+}
+</script>

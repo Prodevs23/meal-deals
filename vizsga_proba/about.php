@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <div class="fejlec">
     <?php include_once "header.php"; ?>
 </div>

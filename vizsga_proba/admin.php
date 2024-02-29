@@ -2,11 +2,18 @@
     session_start();
 ?>
 
+
+<div class="fejlec">
+    <?php include_once "header.php"; ?>
+</div>
+
+<?php include_once "menu.php"; ?>
+
     <!DOCTYPE html>
     <html lang="hu">
     <head>
         <meta charset="utf-8">
-        <title>User Registraion using PHP OOPs Concept</title>
+        <title>Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         
@@ -50,8 +57,8 @@
                   "<td>" . $row["email"] . "</td>" .
                   "<td>" . $row["phone"] . "</td>" .
                   "<td>" . $row["address"] . "</td>" .
-                  "<td> <button type='button' class='btn btn-primary'> Update </button> </td>" . 
-                  "<td> <button type='button' class='btn btn-danger'> Delete </button></td>" . 
+                  "<td> <button type='submit' class='btn btn-primary'> Update </button> </td>" . 
+                  "<td> <button type='submit' class='btn btn-danger'> Delete </button></td>" . 
                   //"<td>" . $row["pass"] . "</td>" .
              "</tr>";
         

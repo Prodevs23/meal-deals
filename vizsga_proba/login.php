@@ -28,19 +28,19 @@ $num=mysqli_fetch_array($ret);
 
 if($num>0) {
   $_SESSION['userid'] = $num['user_id'];
-  //$_SESSION['lastname'] = $num['lastname'];
-  //$_SESSION['middlename'] = $num['middlename'];
-  //$_SESSION['firstname'] = $num['firstname'];
+  $_SESSION['lastname'] = $num['lastname'];
+  $_SESSION['middlename'] = $num['middlename'];
+  $_SESSION['firstname'] = $num['firstname'];
   $_SESSION['username'] = $num['username'];
-  //$_SESSION['email'] = $num['email'];
-  //$_SESSION['phone'] = $num['phone'];
-  //$_SESSION['address'] = $num['address'];
+  $_SESSION['email'] = $num['email'];
+  $_SESSION['phone'] = $num['phone'];
+  $_SESSION['address'] = $num['address'];
   $_SESSION['pass'] = $num['pass'];
   $_SESSION['pasword'] = $_POST['password'];
   
   if ($num['username'] == 'admin') {
   //echo "ok" . $num['username'] . $_POST['password'];
-  echo "<script>window.location.href='admin.php'</script>";
+  echo "<script>window.location.href='./admin/renderAdmin.php'</script>";
   //echo "<script>window.location.href='admin.php'</script>";
   } else {
   echo "<script>window.location.href='ing.php'</script>";
@@ -62,7 +62,7 @@ echo "<script>window.location.href='login.php'</script>";
 <html lang="hu">
 <head>
     <meta charset="utf-8">
-    <title>User Signin using PHP OOPs Concept</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <!--
@@ -71,57 +71,6 @@ echo "<script>window.location.href='login.php'</script>";
     <script src="assests/bootstrap.min.js"></script>
 -->
 </head>
-
-<!--
-<body>
-<form class="form-horizontal" action='' method="POST">
-  <fieldset>
-    <div id="legend">
-      <legend class="">User Signin</legend>
-    </div>
- 
-<div class="control-group">
-      
-      <label class="control-label"  for="username">Username</label>
-      <div class="controls">
-        <input type="text" id="username" name="username" placeholder="" class="input-xlarge" required="true">
-      </div>
-    </div>
- 
- 
-    <div class="control-group">
-      
-      <label class="control-label" for="password">Password</label>
-      <div class="controls">
-        <input type="password" id="password" name="password" placeholder="" class="input-xlarge" required="true">
-      </div>
-    </div>
- 
- 
- 
-    <div class="control-group">
-      
-      <div class="controls">
-        <button class="btn btn-success" type="submit" name="signin">Signin</button>
-      </div>
-    </div>
- 
- <div class="control-group">
-      
-      <div class="controls">
-      Not Registered yet? <a href="index.php">Register Here</a>
-      </div>
-    </div>
- 
-  </fieldset>
-</form>
-<script type="text/javascript">
- 
-</script>
-</body>
--->
-
-</html>
 
 
 <div class="container login">
@@ -169,3 +118,4 @@ function checkusername(value) {
 
 }
 </script>
+</html>

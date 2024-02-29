@@ -9,14 +9,6 @@
 	padding:0;
 }
 
-#menu a {
-	text-decoration: none;
-	padding: 0 5px;
-	background-color: #005500;
-	color: white;
-	display:block;
-}
-
 .fo {
     display: inline-block;
 }
@@ -76,3 +68,4 @@
 .c {
 	color: #005500;
 }
+

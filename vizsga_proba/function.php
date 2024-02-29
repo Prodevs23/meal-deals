@@ -105,5 +105,10 @@ function listIngredients() {
 	$result =mysqli_query($this->dbh, "SELECT * FROM ingredients;");
 	return $result;
 }
+
+function listProfil($user) {
+	$result = mysqli_query($this->dbh, "SELECT * FROM users WHERE username = '$user' LIMIT 1;");
+	return $result;
+}
 }
 ?>

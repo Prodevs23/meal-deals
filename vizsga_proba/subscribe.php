@@ -49,14 +49,16 @@ echo "<script>alert('Subscribe unsuccessfull, try once more');</script>";
     <meta charset="utf-8">
     <title>User Subscribe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="substyle.css">
     <!--
-    <link href="assests/style.css" rel="stylesheet">
+    
     <script src="assests/jquery-1.11.1.min.js"></script>
     <script src="assests/bootstrap.min.js"></script>
 -->
 </head>
-
+<body>
+    
+<div class="subscribeForm">
 <form action="" method="POST">
 <div class="container">
     <div class="img__container">
@@ -78,3 +80,6 @@ echo "<script>alert('Subscribe unsuccessfull, try once more');</script>";
     </div>
 </div>
 </form>
+</div>
+</body>
+</html>

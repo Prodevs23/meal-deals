@@ -1,5 +1,4 @@
 
-
 <header class="fejlec">
 
     <?php include_once "header.php"; ?>
@@ -13,7 +12,7 @@
     <html lang="hu">
     <head>
         <meta charset="utf-8">
-        <title>User Registraion using PHP OOPs Concept</title>
+        <title>Menu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="substyle.css">
@@ -49,6 +48,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="login.php">Login</a></li>
                             <li><a class="dropdown-item" href="subscribe.php">Subscribe</a></li>
+                            <li><a class="dropdown-item" href="profil.php">Profil</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -59,11 +59,24 @@
                 </ul>
 
                 <div class="c">
-                    <h6><?php include_once "text.php"; echo $var; 
+                    <h6><?php include_once "text.php"; 
                     ?></h6>
                 </div>
 
-                <form class="d-flex" role="search" action="logout.php">
+                <form class="d-flex" role="search" 
+                      action="
+                      <?php
+    
+                        $src = $_SERVER['REQUEST_URI'];
+                        $src = substr($src, strrpos($src, '/') + 1);
+    
+                        if ($src = "renderAdmin.php") {
+                            echo "../logout.php";    
+                        }else
+                        echo "logout.php";
+                      ?>
+                      
+                      ">
                     <div class="loginuser" type="">
                         <h6><?php if (isset($_SESSION['username'])) echo $_SESSION['username']; ?></h6>
                     </div>

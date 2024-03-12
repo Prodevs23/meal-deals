@@ -43,7 +43,7 @@ if($num>0) {
   echo "<script>window.location.href='./admin/renderAdmin.php'</script>";
   //echo "<script>window.location.href='admin.php'</script>";
   } else {
-  echo "<script>window.location.href='ing.php'</script>";
+  echo "<script>window.location.href='user.php'</script>";
   }
 
 //echo "<script>window.location.href='welcome.php'</script>";
@@ -83,7 +83,7 @@ echo "<script>window.location.href='login.php'</script>";
 
     <div class="container">
       <label for="username"><b>Username</b></label>
-      <input class="inputbox" type="text" placeholder="Enter Username" name="username" onblur="checkusername(this.value)" required>
+      <input class="inputbox" type="text" placeholder="Enter Username" name="username" required> <!--onblur="checkusername(this.value)"-->
 
       <label for="pass"><b>Password</b></label>
       <input class="inputbox" type="password" placeholder="Enter Password" name="password" required>
@@ -107,6 +107,7 @@ echo "<script>window.location.href='login.php'</script>";
 
 <script>
 function checkusername(value) {
+  /*
   $.ajax({
   type: "POST",
   url: "check_availability.php",
@@ -115,7 +116,8 @@ function checkusername(value) {
   $("#usernameavailability").html(data);
   }
   });
-
+*/
+  console.log(value);
 }
 </script>
 </html>

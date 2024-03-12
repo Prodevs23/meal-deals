@@ -1,4 +1,3 @@
-
 <header class="fejlec">
 
     <?php include_once "header.php"; ?>
@@ -53,6 +52,7 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="alapanyagok.php">Alapanyagok</a></li>
+                            <li><a class="dropdown-item" href="receptek.php">Receptek</a></li>
                         </ul>
                     </li>
 

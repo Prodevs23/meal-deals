@@ -20,10 +20,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM users;");
 
     <?php include_once "../menu.php"; ?>
 
-<html>
+
 <head>	
 	<title>Adminpage</title>
 </head>
+
+<html>
 
 <body>
 	<h2>Adminpage</h2>

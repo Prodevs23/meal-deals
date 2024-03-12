@@ -26,7 +26,8 @@ $userName = $_POST['username'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $address = $_POST['address']; 
-$pasword = md5($_POST['pass1']);
+//$pasword = md5($_POST['pass1']);
+$pasword = $_POST['pass1'];
 
 $ret = $newusercredentials->registration($lastName, $middleName, $firstName, $userName, $email, $phone, $address, $pasword);
 
@@ -76,7 +77,7 @@ echo "<script>alert('Subscribe unsuccessfull, try once more');</script>";
         <input type="text" class="inputbox" placeholder="Password" name="pass1" required>
         <input type="text" class="inputbox" placeholder="Password once more" name="pass2" required>
         <input type="submit" value="Subscribe" class="subscribe" name="subscribe">
-        <p class="text">We won’t send you spam. Unsubscribe at any time.</p>
+        <p class="text">We won't send you spam. Unsubscribe at any time.</p>
     </div>
 </div>
 </form>

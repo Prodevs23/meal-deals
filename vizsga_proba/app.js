@@ -24,7 +24,10 @@ $('button').on('click', function () {
             url: 'action.php',
             type: 'post',
             data: { "array": array},
-            success: function(response) { console.log(response); }
+            success: function(response) { 
+                console.log(response); 
+                $("#div1").html(response);
+            }
         });
     }
 });

@@ -8,8 +8,5 @@
     "start": "npx lite-server"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "lite-server": "^2.6.1"
-  }
+  "license": "ISC"
 }

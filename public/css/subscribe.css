@@ -1,0 +1,144 @@
+.c {
+    
+    color: blueviolet;
+}
+
+.loginuser {
+  margin-top: 20px;
+  color: blueviolet;
+}
+
+#fejlec {
+    text-align: center;
+}
+
+.wrapper {
+    padding-top: 5px;
+    color: #000;
+    font-family: 'Muli', sans-serif;
+    font-size: 1rem;
+    background-color: #F1E8E6;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+  }
+  
+  .subscribeForm {
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 1em;
+    max-width: 768px;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    box-shadow: 0px 17px 34px -20px #f55951,
+                17px 0px 34px -20px #f55951,
+               -17px 0px 34px -20px #f55951,
+                0px -17px 34px -20px #f55951;
+    /*-webkit-box-shadow: 0px 17px 34px -20px #f55951;
+            box-shadow: 0px 17px 34px -20px #f55951;
+            box-shadow: 0px 17px 34px -20px #f55951;
+            */
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  
+  .text {
+    font-size: 1rem;
+    margin-bottom: 0.8em;
+  }
+  
+  .container {
+    max-width: 400px;
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  .img {
+    width: 100%;
+    height: auto;
+    border-radius: 1em 1em 0 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  
+  .img__container {
+    height: 100px;
+    overflow: hidden;
+    margin-bottom: 1.2em;
+  }
+  
+  .title {
+    margin-bottom: 0.9em;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+  }
+  
+  .content {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    padding: 0 1.2em;
+    margin-bottom: 0.8em;
+  }
+  
+  .inputbox {
+    padding: 0.5em 0 0.5em 1.2em;
+    line-height: 1;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.5em;
+    margin-bottom: 0.6em;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: #111127;
+  }
+  
+  :-ms-input-placeholder {
+    color: #111127;
+  }
+  
+  ::-ms-input-placeholder {
+    color: #111127;
+  }
+  
+  ::placeholder {
+    color: #111127;
+  }
+  
+  .subscribe {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: #46914f;
+    padding: 0.4em 0;
+    display: inline-block;
+    border: none;
+    border-radius: 0.5em;
+    width: 100%;
+    margin-bottom: 0.6em;
+  }
+  
+  .text {
+    font-size: 0.9rem;
+    width: 90%;
+    text-align: center;
+  }
+
+  .subscribeForm {
+    padding-top: 10px;
+  }

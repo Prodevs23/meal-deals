@@ -7,6 +7,38 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Install Composer Dependencies
+Laravel uses Composer for PHP dependency management.
+Navigate to your project folder.
+Run composer install to install PHP dependencies.
+
+composer install
+
+## Generate an application key.
+
+php artisan key:generate
+
+## Generate an application key.
+
+php artisan key:generate
+
+## Setup .env
+
+Duplicate the .env.example file and rename it to .env.
+Open the .env file and set your database connection details.
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=mealdeals
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+
+## Migrate the Database
+
+Run database migrations to create tables.
+php artisan migrate
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

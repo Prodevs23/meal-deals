@@ -1,0 +1,24 @@
+{
+  "name": "meal-deals-rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Prodevs23/meal-deals.git"
+  },
+  "author": "Prodevs23",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prodevs23/meal-deals.git/issues"
+  },
+  "homepage": "https://github.com/Prodevs23/meal-deals.git#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fastify": "^3.1.1",
+    "mysql2": "^2.1.0"
+  }
+}

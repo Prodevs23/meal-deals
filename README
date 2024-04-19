@@ -6,7 +6,11 @@ XAMPP
 
 php -S localhost:3000 -t ./
 
+user: admin
+password: admin
 
+user: koko
+password: Koko+koko+0
 
 ###  API
 

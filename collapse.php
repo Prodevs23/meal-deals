@@ -73,23 +73,13 @@
             <?php
         }
     ?>
-    
+
   <button onclick="myfunction()" type="button" id="recipeSearchButton" style="background-color:rgb(0, 130, 0);color:white;border-radius:10px;">Keresés</button>
   
-  <!--onclick="window.location.href='listRecipe.php'"-->
 </p>
-
-
-
-
-
 
 <?php
 
-
-
-
-  
   for ($i=1; $i <= $category_count; $i++) { 
     echo '
     <div class="row">
@@ -104,24 +94,12 @@
     ';
   }
   
-
-  $GLOBALS['click'] = "nem nyomás";
- $click = "nem nyomás";
-  //$nem[0] = 0;
-  //for ($i=0; $i <77 ; $i++) { 
-  //  $nem[$i] = 0;
-  //}
 function listIngredients($list){ 
   foreach ($list as $key => $value) { 
     echo '<button onclick="cliked(this)" class="btn border choose" style="background-color:#FFA07A;" id="chooseButton' . (string) $key . '" style="width:150px;margin-top:20px;">' . $list[$key] . '</button>';
-    //if ($GLOBALS['click'] == "nem nyomás") $GLOBALS['click'] = "nyomás";
-   // global $click; 
-    //$GLOBALS['click'] = "nyomás";
-    //echo $click;
-    //$nem[$key] = 1;echo $key;
+    
   }
 }
-
 
 //echo json_encode($ingredientList);
 //echo $ingredientsNumber;
@@ -146,13 +124,10 @@ mehetGomb.addEventListener('click', event => {
   
 });
 
-
-
 var c = "";
 var data = <?php echo json_encode($_SESSION['chooseIngredients']); ?>;
 function cliked(btn){
        
-
 
   console.log("clickedddd");
   
@@ -161,19 +136,14 @@ function cliked(btn){
   //  else $myarray[$ingredientId] = 0;
   //console.log($_SESSION['chooseIngredients'][$ingredientId]);
   //console.log('ing_id : '+ $ingredientId);
-  
-
-  
-  if (data[2] == 0) data[2] = 1
-    else data[2] = 0;
-
-  //data[2] = 11;
-console.log('data---'+data[2]);
 
 
 
  //window.location.href='../nem.php';
 }
-</script>
 
-<?php
+function myfunction() {
+  console.log('myfunction');
+  <?php echo "window.location.href='listRecipe.php'"; ?>
+  }
+</script>

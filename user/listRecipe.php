@@ -26,7 +26,7 @@ session_start();
     </div>
 
     <div class="picture">
-        <img src="/pic/makosteszta.jpg" alt="">
+        <img src="../pic/makosteszta.jpg" alt="">
     </div>
 
 

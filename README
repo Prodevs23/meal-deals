@@ -1,0 +1,17 @@
+# Meal-deals
+
+###  Elindítás
+
+XAMPP
+
+php -S localhost:3000 index.php
+
+
+###  API
+
+Az api könyvtárban:
+
+npm install
+
+node server.js
+
